@@ -1,14 +1,32 @@
-# NC530 project download page
+# NC530 project downloads
 
-A single static page serving the Visual Studio 2010 edition of the three assignment projects.
+A simple static download page for the Visual Studio 2010 edition of the three NC530 Computer Programming Level 4 Paper 2 projects.
 
-- `dist/index.html`: simple download page, with embedded CSS and no JavaScript or external assets.
-- `dist/downloads/`: complete package and individual question ZIPs.
-- `assignment/`: editable assignment sources, including `Assignment VS2010.sln`.
-- `.openai/hosting.json`: Sites identity and static-directory configuration.
+## Contents
 
-The public site is intended to let anyone with the link download the package. The missing question paper still needs to confirm the assignment requirements; each question includes its assumptions in its README.
+- `dist/index.html`: the single download page, with embedded CSS and no JavaScript dependencies.
+- `dist/downloads/`: the full assignment ZIP and individual question downloads.
+- `assignment/`: editable Visual Basic and website sources, tests and instructions.
+- `.github/workflows/pages.yml`: publishes `dist/` to GitHub Pages whenever `main` changes.
 
-To preview locally from this repository, run `python3 -m http.server 8080 --directory dist`, then visit the printed local address. No build or dependency installation is required.
+The website can also be hosted by any static file host. There is no build command; use `dist` as the publish directory.
 
-Git tracks the website, download releases and editable assignment sources. Generated Visual Studio build output and IDE caches are ignored.
+## GitHub Pages
+
+Repository: https://github.com/brestobi/nc530-project-downloads
+
+In repository Settings > Pages, select **GitHub Actions** as the source if it is not already selected. The included workflow publishes the site and reports its URL in the deployment summary. It can also be started manually from the Actions tab.
+
+## Local preview
+
+```sh
+python3 -m http.server 8080 --directory dist
+```
+
+Visit `http://localhost:8080` to preview the page.
+
+## Assignment projects
+
+Download the full ZIP, extract it into a new folder, and open `Assignment VS2010.sln` in Visual Studio 2010. The desktop applications target .NET Framework 4.0. Question 2 needs a 32-bit Jet or Access provider. For Question 3, open its `index.html` in a modern browser.
+
+The question paper is still missing. The calculation rules and Question 3 page content are provisional; check each question's README before submission.
