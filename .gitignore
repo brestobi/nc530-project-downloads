@@ -1,0 +1,9 @@
+node_modules/
+**/bin/
+**/obj/
+**/.vs/
+*.suo
+*.user
+.site-artifacts/
+*.tar.gz
+.DS_Store

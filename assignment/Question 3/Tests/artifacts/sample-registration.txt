@@ -1,0 +1,9 @@
+COMMUNITY SPORTS CLUB
+Registration summary
+
+Name: René O’Connor
+Email: rene@example.com
+Sport: Netball
+Membership: Player
+
+No application has been sent. Give this summary to the club to complete registration.

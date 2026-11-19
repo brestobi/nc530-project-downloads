@@ -1,0 +1,10 @@
+{
+  "name": "question-3-browser-checks",
+  "private": true,
+  "scripts": {
+    "test": "node browser-tests.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}

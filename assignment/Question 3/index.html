@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prepare a Community Sports Club membership form and download your registration summary.">
+    <title>Membership registration | Community Sports Club</title>
+    <link rel="icon" href="club-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to registration</a>
+    <div class="container">
+        <header class="header">
+            <a class="brand" href="#about" aria-label="Community Sports Club, about the club">
+                <img src="club-mark.svg" alt="" width="52" height="52">
+                <span>Community <strong>Sports Club</strong></span>
+            </a>
+            <p>Play. Connect. Belong.</p>
+        </header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#registration">Registration</a>
+            <a href="#help">Help</a>
+        </nav>
+        <main class="content" id="main">
+            <section class="form-header" id="about" aria-labelledby="page-title">
+                <p class="eyebrow">Find your place on the team</p>
+                <h1 id="page-title">Membership registration</h1>
+                <p>Choose your sport and prepare your registration details.</p>
+            </section>
+            <div class="form-container" id="registration">
+                <form id="registration-form">
+                    <div class="form-intro">
+                        <h2>Your details</h2>
+                        <p>All fields are required.</p>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="first-name">First name</label>
+                            <input id="first-name" name="firstName" type="text" autocomplete="given-name" maxlength="60" required>
+                        </div>
+                        <div class="field">
+                            <label for="surname">Surname</label>
+                            <input id="surname" name="surname" type="text" autocomplete="family-name" maxlength="60" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="email-help" required>
+                        <p class="field-help" id="email-help">Use the address you want to include in your registration.</p>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="sport">Preferred sport</label>
+                            <select id="sport" name="sport" required>
+                                <option value="">Choose a sport</option>
+                                <option value="Soccer">Soccer</option>
+                                <option value="Netball">Netball</option>
+                                <option value="Rugby">Rugby</option>
+                                <option value="Swimming">Swimming</option>
+                                <option value="Tennis">Tennis</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="membership">Membership type</label>
+                            <select id="membership" name="membership" required>
+                                <option value="">Choose a type</option>
+                                <option value="Player">Player</option>
+                                <option value="Social member">Social member</option>
+                                <option value="Volunteer">Volunteer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="submission-note">This form prepares a summary for you to download. It does not send an application to a club.</p>
+                    <div class="form-actions">
+                        <button type="submit" id="review-button" disabled>Review details</button>
+                        <button type="reset" class="secondary">Clear form</button>
+                    </div>
+                    <noscript><p class="notice">Enable JavaScript to review your details and download the summary.</p></noscript>
+                </form>
+                <section class="summary" id="registration-summary" aria-labelledby="summary-title" tabindex="-1" hidden>
+                    <p class="eyebrow">Ready to review</p>
+                    <h2 id="summary-title">Your registration summary</h2>
+                    <p>Check your details before saving a copy. No application has been sent.</p>
+                    <dl>
+                        <div><dt>Name</dt><dd id="summary-name"></dd></div>
+                        <div><dt>Email</dt><dd id="summary-email"></dd></div>
+                        <div><dt>Sport</dt><dd id="summary-sport"></dd></div>
+                        <div><dt>Membership</dt><dd id="summary-membership"></dd></div>
+                    </dl>
+                    <div class="form-actions">
+                        <button type="button" id="download-button" disabled>Download summary</button>
+                        <button type="button" id="edit-button" class="secondary">Edit details</button>
+                    </div>
+                    <p class="field-help" id="download-status" aria-live="polite"></p>
+                </section>
+                <details id="help" class="help">
+                    <summary>How do I finish registering?</summary>
+                    <p>Enter your details, choose a sport and membership type, then select <strong>Review details</strong>. Download the summary and give it to the club to complete your application.</p>
+                    <p>Your entries stay on this page until you clear it or reload it. The form does not save your details between visits.</p>
+                </details>
+            </div>
+        </main>
+        <footer class="footer">Community Sports Club <span aria-hidden="true">&middot;</span> Membership</footer>
+    </div>
+</body>
+</html>

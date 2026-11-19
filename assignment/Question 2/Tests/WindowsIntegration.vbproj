@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B610C96-BA0D-57A1-98C4-3F007F45E3DE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PolicyIntegrationTests</RootNamespace>
+    <StartupObject>PolicyIntegrationTests.Program</StartupObject>
+    <AssemblyName>PolicyIntegrationTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <MyType>Console</MyType>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <OutputPath>bin\Windows\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\Windows\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Compile Include="WindowsIntegration.vb" />
+    <Compile Include="..\Policies\Policies\PolicyQueries.vb"><Link>PolicyQueries.vb</Link></Compile>
+    <Compile Include="..\Policies\Policies\PolicyRepository.vb"><Link>PolicyRepository.vb</Link></Compile>
+    <None Include="App.config" />
+    <None Include="..\Database\PolicyValidation.mdb">
+      <Link>Database\PolicyValidation.mdb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

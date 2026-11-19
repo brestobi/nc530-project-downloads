@@ -1,0 +1,23 @@
+VISUAL STUDIO 2010 EDITION
+
+1. Extract this new VS2010 ZIP into a NEW folder. Do not run the projects from inside the ZIP or mix them with the earlier download.
+2. Open Assignment VS2010.sln in Visual Studio 2010 or Visual Basic 2010 Express.
+3. In Solution Explorer, right-click VehicleFinance and select Set as StartUp Project. Press F5 for Question 1.
+4. To run Question 2, right-click Policies, select Set as StartUp Project, and press F5.
+5. Question 3 is a web page. Open Question 3/index.html in a modern browser.
+
+Both desktop projects now use:
+- Visual Studio 2010 solution format (11.00).
+- MSBuild ToolsVersion 4.0 project format.
+- Full .NET Framework 4.0, rather than 4.8.
+- Code verified with Visual Basic 2010 language restrictions.
+
+The optional Visual Basic test projects also use the VS2010 / .NET Framework 4.0 project format. They are not required to run the assignment applications.
+
+This package excludes old IDE caches, old Debug output, nested ZIPs and original backups, so you will not accidentally open a newer-format project from an old archive.
+
+Question 2 still needs a registered 32-bit Access provider (Jet 4.0 or ACE); its build stays x86. The supplied database is included and is copied beside the executable automatically during a build.
+
+The projects compiled successfully against Microsoft's .NET Framework 4.0 reference assemblies with the compiler restricted to Visual Basic 2010 syntax. Finance tests (12,265 assertions) and policy-validation tests (45 assertions) passed after conversion on the available .NET 10 runtime. Visual Studio 2010 itself, the Windows UI and the native Access connection have not been executed in this Linux workspace.
+
+The missing question paper is still needed to confirm the assignment's formulas, required output and Question 3 page content. See each question's README.md for the provisional assumptions and worked examples.
