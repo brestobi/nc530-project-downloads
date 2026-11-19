@@ -15,6 +15,16 @@ The website can also be hosted by any static file host. There is no build comman
 
 Repository: https://github.com/brestobi/nc530-project-downloads
 
+Custom domain configured in GitHub Pages: `me.illdoit.space`.
+
+DNS for `illdoit.space` is managed by Cloudflare. The required subdomain record is:
+
+| Type | Name | Target | Proxy | TTL |
+| --- | --- | --- | --- | --- |
+| CNAME | me | brestobi.github.io | DNS only | Auto |
+
+The target excludes the repository name. The domain needs this DNS record before it can resolve and GitHub can issue its HTTPS certificate. After issuance, enable Enforce HTTPS in repository Settings > Pages. The workflow deploys a static artifact, so GitHub Pages stores the custom-domain setting in repository configuration rather than a CNAME source file.
+
 In repository Settings > Pages, select **GitHub Actions** as the source if it is not already selected. The included workflow publishes the site and reports its URL in the deployment summary. It can also be started manually from the Actions tab.
 
 ## Local preview
